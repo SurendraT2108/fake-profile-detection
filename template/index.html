@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Profile Detection</title>
+</head>
+<body>
+    <h2>Fake Profile Detection</h2>
+
+    <form action="/predict" method="POST">
+        Followers: <input type="number" name="followers"><br><br>
+        Following: <input type="number" name="following"><br><br>
+        Has Profile Picture (1/0): <input type="number" name="has_pic"><br><br>
+        Has Bio (1/0): <input type="number" name="has_bio"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ result }}</h3>
+
+</body>
+</html>
