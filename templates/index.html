@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Fake Profile Detection</title>
-</head>
-<body>
+<link rel="stylesheet" href="/static/style.css">
+
+<div class="container">
     <h2>Fake Profile Detection</h2>
-
+    
     <form action="/predict" method="POST">
-        Followers: <input type="number" name="followers"><br><br>
-        Following: <input type="number" name="following"><br><br>
-        Has Profile Picture (1/0): <input type="number" name="has_pic"><br><br>
-        Has Bio (1/0): <input type="number" name="has_bio"><br><br>
-
+        <input type="number" name="followers" placeholder="Followers">
+        <input type="number" name="following" placeholder="Following">
+        <input type="number" name="has_pic" placeholder="Has Profile Picture (1 or 0)">
+        <input type="number" name="has_bio" placeholder="Has Bio (1 or 0)">
         <button type="submit">Predict</button>
     </form>
 
-    <h3>{{ result }}</h3>
-
-</body>
-</html>
+    {% if result %}
+        <div class="result-box {% if 'REAL' in result %}result-success{% else %}result-fail{% endif %}">
+            {{ result }}
+        </div>
+    {% endif %}
+</div>
