@@ -1,4 +1,92 @@
+/* Global styling */
 body {
-    font-family: Arial;
-    margin: 40px;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    background: #ffffff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Input fields */
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d3d3d3;
+    transition: 0.2s ease;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59,130,246,0.4);
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Prediction result */
+.result-box {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.result-success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.result-fail {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
